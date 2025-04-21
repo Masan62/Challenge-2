@@ -131,9 +131,7 @@ body {
   max-width: none;
   max-height: none;
   object-fit: contain;
-  image-rendering: auto;
-  border: 2px dashed lime;               
-  z-index: 10;
+  image-rendering: auto;            
 }
 
 
