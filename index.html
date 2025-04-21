@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Damage Map</title>
+  <link rel="stylesheet" href="screen.css" />
+</head>
+<body>
+  <div class="upper-menu">
+    <div class="menu-icon"><img src="menu.png" alt="Menu" /></div>
+    <div class="icons">
+      <img src="Loc.png" alt="Map" />
+      <img src="cloud.png" alt="Cloud" />
+      <img src="search.png" alt="Search" />
+      <img src="user.png" alt="User" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="map-container">
+      <img src="map.png" alt="Map" class="map" />
+
+      <!-- 🔴 Red Area 1 (with toggle notification) -->
+      <div class="marker-zone red marker-1" onclick="toggleNotification()">
+        <img src="lr.png" class="map-icon icon-a" />
+        <img src="lr.png" class="map-icon icon-b" />
+        <img src="lr.png" class="map-icon icon-c" />
+        <img src="notification.png" id="notification" class="notif hidden" />
+      </div>
+
+      <!-- 🔴 Red Area 2 -->
+      <div class="marker-zone red marker-2">
+        <img src="lr.png" class="map-icon icon-d" />
+        <img src="lr.png" class="map-icon icon-e" />
+      </div>
+
+      <!-- 🟠 Orange Area -->
+      <div class="marker-zone orange marker-3">
+        <img src="lo.png" class="map-icon icon-a" />
+        <img src="lo.png" class="map-icon icon-b" />
+      </div>
+
+      <!-- 🟡 Yellow Area -->
+      <div class="marker-zone yellow marker-4">
+        <img src="ly.png" class="map-icon icon-a" />
+        <img src="ly.png" class="map-icon icon-b" />
+        <img src="ly.png" class="map-icon icon-c" />
+        <img src="ly.png" class="map-icon icon-d" />
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <h2>Damage Severity</h2>
+
+      <div class="info-card high">
+        <p class="severity-title">Damage Severity: High</p>
+        <p><img src="pin.png" class="pin-icon" alt="Pin" /> Eastwood & Second Ward</p>
+        <p><img src="riskr.png" class="icon-inline" alt="Warning" /> Severe roof collapse, foundation cracks.</p>
+      </div>
+
+      <div class="info-card high">
+        <p class="severity-title">Damage Severity: High</p>
+        <p><img src="pin.png" class="pin-icon" alt="Pin" /> Fifth Ward Area</p>
+        <p><img src="riskr.png" class="icon-inline" alt="Warning" /> Collapsed garage, water damage.</p>
+      </div>
+
+      <div class="info-card medium">
+        <p class="severity-title">Damage Severity: Medium</p>
+        <p><img src="pin.png" class="pin-icon" alt="Pin" /> Montrose Area</p>
+        <p><img src="risko.png" class="icon-inline" alt="Warning" /> Broken windows, siding damage.</p>
+      </div>
+
+      <div class="info-card low">
+        <p class="severity-title">Damage Severity: Low</p>
+        <p><img src="pin.png" class="pin-icon" alt="Pin" /> Houston Heights</p>
+        <p><img src="risky.png" class="icon-inline" alt="Warning" /> Minor fence damage, debris cleared.</p>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
 </html>
+<script src="index.js"></script>

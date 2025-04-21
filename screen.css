@@ -1,4 +1,200 @@
-/* Add screen styles below */
-a.active {
-    font-weight: bold;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+/* === Top Menu === */
+.upper-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 20px;
+}
+
+.menu-icon img,
+.icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* === Layout === */
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.map-container {
+  position: relative;
+  flex: 3;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Marker Circles === */
+.marker-zone {
+  position: absolute;
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.marker-zone.red {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.marker-zone.orange {
+  background-color: rgba(255, 165, 0, 0.15);
+}
+
+.marker-zone.yellow {
+  background-color: rgba(255, 255, 0, 0.15);
+}
+
+/* === Circle Positions === */
+.marker-1 {
+  --radius: 100px;
+  top: 240px;
+  left: 800px;
+}
+
+.marker-2 {
+  --radius: 90px;
+  top: 450px;
+  left: 750px;
+}
+
+.marker-3 {
+  --radius: 90px;
+  top: 500px;
+  left: 250px;
+}
+
+.marker-4 {
+  --radius: 110px;
+  top: 180px;
+  left: 150px;
+}
+
+/* === Map Icons === */
+.map-icon {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* === Position adjustments for map icons === */
+.icon-a {
+  top: 20px;
+  left: 40px;
+}
+
+.icon-b {
+  top: 50px;
+  left: 80px;
+}
+
+.icon-c {
+  top: 70px;
+  left: 30px;
+}
+
+.icon-d {
+  top: 30px;
+  left: 60px;
+}
+
+.icon-e {
+  top: 60px;
+  left: 50px;
+}
+
+/* === Notification Icon === */
+.notif {
+  position: absolute;
+  top: -200px;
+  left: -250px;
+  width: 300px;
+  height: 300px;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  image-rendering: auto;
+  border: 2px dashed lime;               
+  z-index: 10;
+}
+
+
+/* === Hides notification initially === */
+.hidden {
+  display: none;
+}
+
+/* === Sidebar === */
+.sidebar {
+  flex: 1;
+  background-color: #3F3F46;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.info-card {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #4F4F56;
+  color: white;
+}
+
+.severity-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* === Sidebar icons === */
+.icon-inline {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.pin-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* === Severity Color Highlights === */
+.high .severity-title {
+  color: red;
+}
+
+.medium .severity-title {
+  color: #F29D38;
+}
+
+.low .severity-title {
+  color: #F9D978;
 }
